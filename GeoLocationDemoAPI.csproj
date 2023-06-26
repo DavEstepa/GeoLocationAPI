@@ -10,6 +10,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GeoLocationDemo.ApplicationCore\**" />
+    <Compile Remove="GeoLocationDemo.Infrastructure.Repositories\**" />
+    <Compile Remove="GeoLocationDemo.Infrastructure.Services\**" />
+    <Content Remove="GeoLocationDemo.ApplicationCore\**" />
+    <Content Remove="GeoLocationDemo.Infrastructure.Repositories\**" />
+    <Content Remove="GeoLocationDemo.Infrastructure.Services\**" />
+    <EmbeddedResource Remove="GeoLocationDemo.ApplicationCore\**" />
+    <EmbeddedResource Remove="GeoLocationDemo.Infrastructure.Repositories\**" />
+    <EmbeddedResource Remove="GeoLocationDemo.Infrastructure.Services\**" />
+    <None Remove="GeoLocationDemo.ApplicationCore\**" />
+    <None Remove="GeoLocationDemo.Infrastructure.Repositories\**" />
+    <None Remove="GeoLocationDemo.Infrastructure.Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
   </ItemGroup>
 

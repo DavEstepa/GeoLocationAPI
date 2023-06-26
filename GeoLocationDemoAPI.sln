@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoLocationDemoAPI", "GeoLocationDemoAPI.csproj", "{4C3F53CA-3B0F-4A7D-9880-CD8AEF6B4932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoLocationDemoAPI", "GeoLocationDemoAPI.csproj", "{4C3F53CA-3B0F-4A7D-9880-CD8AEF6B4932}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoLocationDemo.ApplicationCore", "GeoLocationDemo.ApplicationCore\GeoLocationDemo.ApplicationCore.csproj", "{FD28BAF5-D1D2-4AB9-BFBE-D18E044811BD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoLocationDemo.Infrastructure.Repositories", "GeoLocationDemo.Infrastructure.Repositories\GeoLocationDemo.Infrastructure.Repositories.csproj", "{160803BA-2A5B-4E5D-AFE5-98925206FDDE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GeoLocationDemo.Infrastructure.Services", "GeoLocationDemo.Infrastructure.Services\GeoLocationDemo.Infrastructure.Services.csproj", "{2DCC92B8-3112-430C-A2CF-CF018EE95B85}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{4C3F53CA-3B0F-4A7D-9880-CD8AEF6B4932}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C3F53CA-3B0F-4A7D-9880-CD8AEF6B4932}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C3F53CA-3B0F-4A7D-9880-CD8AEF6B4932}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD28BAF5-D1D2-4AB9-BFBE-D18E044811BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD28BAF5-D1D2-4AB9-BFBE-D18E044811BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD28BAF5-D1D2-4AB9-BFBE-D18E044811BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD28BAF5-D1D2-4AB9-BFBE-D18E044811BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160803BA-2A5B-4E5D-AFE5-98925206FDDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160803BA-2A5B-4E5D-AFE5-98925206FDDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160803BA-2A5B-4E5D-AFE5-98925206FDDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160803BA-2A5B-4E5D-AFE5-98925206FDDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DCC92B8-3112-430C-A2CF-CF018EE95B85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DCC92B8-3112-430C-A2CF-CF018EE95B85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DCC92B8-3112-430C-A2CF-CF018EE95B85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DCC92B8-3112-430C-A2CF-CF018EE95B85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
