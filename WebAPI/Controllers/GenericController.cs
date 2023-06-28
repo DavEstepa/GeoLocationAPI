@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using GeoLocationDemo.ApplicationCore.Interfaces.Repositories.PostgreSQL;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GeoLocationDemoAPI.WebAPI.Controllers
@@ -8,16 +9,18 @@ namespace GeoLocationDemoAPI.WebAPI.Controllers
     public class GenericController : ControllerBase
     {
         private readonly ILogger<GenericController> _logger;
+        private readonly IListsRepository _listsRepository;
 
-        public GenericController(ILogger<GenericController> logger)
+        public GenericController(ILogger<GenericController> logger, IListsRepository listsRepository)
         {
             this._logger = logger;
+            this._listsRepository = listsRepository;
         }
 
         [HttpGet]
-        public string MethodExample()
+        public async Task<string> MethodExample()
         {
-            return "OK";
+            return await this._listsRepository.GenericMethod();
         }
 
     }

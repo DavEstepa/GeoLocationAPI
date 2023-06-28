@@ -30,4 +30,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="GeoLocationDemo.ApplicationCore\GeoLocationDemo.ApplicationCore.csproj" />
+    <ProjectReference Include="GeoLocationDemo.Infrastructure.Repositories\GeoLocationDemo.Infrastructure.Repositories.csproj" />
+    <ProjectReference Include="GeoLocationDemo.Infrastructure.Services\GeoLocationDemo.Infrastructure.Services.csproj" />
+  </ItemGroup>
+
 </Project>
