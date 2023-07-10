@@ -1,4 +1,5 @@
-﻿using GeoLocationDemo.ApplicationCore.Interfaces.Repositories.PostgreSQL;
+﻿using GeoLocationDemo.ApplicationCore.Entities;
+using GeoLocationDemo.ApplicationCore.Interfaces.Repositories.PostgreSQL;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,9 +19,9 @@ namespace GeoLocationDemoAPI.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<string> MethodExample()
+        public async Task<IEnumerable<ListValue>> MethodExample(string TypeOfListCode)
         {
-            return await this._listsRepository.GenericMethod();
+            return await this._listsRepository.GetByTypeOfList(TypeOfListCode);
         }
 
     }
