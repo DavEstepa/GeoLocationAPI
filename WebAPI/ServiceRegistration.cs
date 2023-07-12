@@ -1,4 +1,5 @@
 ﻿using GeoLocationDemoAPI.WebAPI.Extensions;
+using GeoLocationDemoAPI.WebAPI.Middlewares;
 
 namespace GeoLocationDemoAPI.WebAPI
 {
@@ -13,6 +14,7 @@ namespace GeoLocationDemoAPI.WebAPI
 
             services.AddSwaggerConfiguration();
             services.AddControllers();
+            services.AddTransient<GeneralErrorHandling>();
         }
 
         public static void UseWebAPISetup(this IApplicationBuilder app)
@@ -24,6 +26,7 @@ namespace GeoLocationDemoAPI.WebAPI
 
             app.UseSwaggerSetup();
             app.UseHttpsRedirection();
+            app.UseMiddleware<GeneralErrorHandling>();
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {

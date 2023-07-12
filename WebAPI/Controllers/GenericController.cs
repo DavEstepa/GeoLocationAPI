@@ -1,13 +1,13 @@
 ﻿using GeoLocationDemo.ApplicationCore.Entities;
 using GeoLocationDemo.ApplicationCore.Interfaces.Repositories.PostgreSQL;
+using GeoLocationDemoAPI.WebAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GeoLocationDemoAPI.WebAPI.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]
-    public class GenericController : ControllerBase
+    public class GenericController : BaseController
     {
         private readonly ILogger<GenericController> _logger;
         private readonly IListsRepository _listsRepository;
@@ -19,9 +19,11 @@ namespace GeoLocationDemoAPI.WebAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<ListValue>> MethodExample(string TypeOfListCode)
+        public async Task<Response<IEnumerable<ListValue>>> MethodExample(string TypeOfListCode)
         {
-            return await this._listsRepository.GetByTypeOfList(TypeOfListCode);
+            throw new Exception("Intended Exception");
+            var response = await this._listsRepository.GetByTypeOfList(TypeOfListCode);
+            return ResponseWrapper(true, response, "");
         }
 
     }
