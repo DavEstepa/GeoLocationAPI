@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using GeoLocationDemoAPI.WebAPI.Models;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using System.Text.Json;
 
@@ -21,19 +22,17 @@ namespace GeoLocationDemoAPI.WebAPI.Middlewares
             {
                 this._logger.LogError(e, e.Message);
                 context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                ProblemDetails errorResponse = new()
+                var error = new ExceptionResponse(e);
+                var errorWrapper = new GeneralResponse<ExceptionResponse>
                 {
-                    Status = (int)HttpStatusCode.InternalServerError,
-                    Type = "",
-                    Title = "",
-                    Detail = ""
+                    Success = false,
+                    Data = error,
+                    Message = ""
                 };
-
-                string json = JsonSerializer.Serialize(errorResponse);
-
+                string json = JsonSerializer.Serialize(errorWrapper);
+                context.Response.ContentType = "application/json";
                 await context.Response.WriteAsync(json);
 
-                context.Response.ContentType = "application/json";
             }
         }
     }
